@@ -83,7 +83,7 @@ class _ProductsState extends State<Products> {
                                 bottomLeft: Radius.circular(12),
                                 bottomRight: Radius.zero),
                             child: Image.network(
-                              'https://placehold.co/80/png',
+                              'https://i.redd.it/wplznapopmm11.jpg',
                               height: 80,
                               width: 80,
                             ),
