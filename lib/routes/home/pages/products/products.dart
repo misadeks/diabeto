@@ -77,7 +77,11 @@ class _ProductsState extends State<Products> {
                             //   borderRadius: BorderRadius.all(Radius.circular(8.0)),
                             //   color: Colors.redAccent,
                             // ),
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(12),
+                                topRight: Radius.zero,
+                                bottomLeft: Radius.circular(12),
+                                bottomRight: Radius.zero),
                             child: Image.network(
                               'https://placehold.co/80/png',
                               height: 80,
