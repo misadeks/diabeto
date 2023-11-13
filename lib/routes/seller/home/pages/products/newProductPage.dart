@@ -186,56 +186,27 @@ class _NewProductPageState extends State<NewProductPage> {
                 ),
                 const Padding(padding: EdgeInsets.only(top: 16)),
                 Container(
+                  height: 52.0 * tagList.length,
                   decoration: BoxDecoration(
                       border: Border.all(
                           color: Theme.of(context).colorScheme.outline),
                       color: Theme.of(context).colorScheme.surfaceVariant),
-                  child: Column(
-                    children: [
-                      Container(
-                        constraints: BoxConstraints(maxHeight: 150),
-                        // Set a specific height or use constraints
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                          child: ListView.separated(
-                            itemBuilder: (BuildContext context, int index) {
-                              final tag = tagList[index];
-
-                              return Row(
-                                children: [
-                                  Expanded(
-                                      child: Padding(
-                                    padding: const EdgeInsets.only(left: 8.0),
-                                    child: Container(
-                                      child: Text(
-                                        tag,
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyLarge,
-                                      ),
-                                    ),
-                                  )),
-                                  Radio<String>(
-                                    value: tag,
-                                    groupValue: productTag,
-                                    onChanged: (value) {
-                                      setState(() {
-                                        productTag = value;
-                                      });
-                                    },
-                                  ),
-                                ],
-                              );
-                            },
-                            itemCount: tagList.length,
-                            separatorBuilder:
-                                (BuildContext context, int index) {
-                              return const Divider();
-                            },
-                          ),
-                        ),
-                      ),
-                    ],
+                  child: ListView.builder(
+                    itemCount: tagList.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Container(
+                        height: 50,
+                        child: RadioListTile<String>(
+                            value: tagList[index],
+                            title: Text(tagList[index]),
+                            groupValue: productTag,
+                            onChanged: (value) {
+                              setState(() {
+                                productTag = value;
+                              });
+                            }),
+                      );
+                    },
                   ),
                 ),
               ],

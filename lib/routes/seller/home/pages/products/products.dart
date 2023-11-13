@@ -1,3 +1,4 @@
+import 'package:diabeto/routes/seller/home/pages/products/newProductPage.dart';
 import 'package:diabeto/routes/seller/home/pages/products/widgets/product_card/productCard.dart';
 import 'package:flutter/material.dart';
 
@@ -88,7 +89,10 @@ class _ProductsState extends State<Products> {
         height: 72,
         child: FloatingActionButton(
           onPressed: () {
-            // Add your onPressed code here!
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => NewProductPage()),
+            );
           },
           child: const Icon(Icons.add),
           backgroundColor: Theme.of(context).colorScheme.tertiaryContainer,

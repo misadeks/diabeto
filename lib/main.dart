@@ -1,8 +1,6 @@
-import 'package:diabeto/injectable.dart';
 import 'package:diabeto/routes/seller/home/SellerHome.dart';
 import 'package:diabeto/routes/loading/loading.dart';
 import 'package:diabeto/routes/login/login.dart';
-import 'package:diabeto/routes/seller/home/pages/products/productPage.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
