@@ -1,4 +1,3 @@
-import 'package:diabeto/injectable.dart';
 import 'package:diabeto/routes/seller/home/SellerHome.dart';
 import 'package:diabeto/routes/loading/loading.dart';
 import 'package:diabeto/routes/login/login.dart';
